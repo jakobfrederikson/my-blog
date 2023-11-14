@@ -2,7 +2,7 @@
 title: "This is my example post"
 excerpt: "In this post, I explain how I've created an example post."
 coverImage: "/assets/blog/hello-world/cover.jpg"
-date: "2023-11-12T13:35:07.322Z"
+date: "2023-11-12"
 ogImage:
   url: "/assets/blog/hello-world/cover.jpg"
 ---
