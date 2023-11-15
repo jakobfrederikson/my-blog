@@ -3,8 +3,8 @@ import Container from '../components/container';
 import Intro from '../components/intro';
 import HeroPost from '../components/hero-post';
 import MorePosts from '../components/more-posts';
-import Navbar from '../components/navbar';
 import Post from '../interfaces/post';
+import Footer from '../components/footer';
 import Head from 'next/head';
 
 import { getAllPosts } from '../lib/api';
@@ -20,9 +20,9 @@ export default function Index({ allPosts }: Props) {
     return (
         <>
             <Layout>
-                <Navbar />
                 <Head>
                     <title>{`JakobDev's Blog`}</title>
+                    <link rel="icon" href="/images/favicon.ico" sizes="any" />
                 </Head>
                 <Container>
                 <Intro />
@@ -37,6 +37,7 @@ export default function Index({ allPosts }: Props) {
                     )}
                     {morePosts.length > 0 && <MorePosts posts={morePosts} />}
                 </Container>
+                <Footer />
             </Layout>
         </>
     );

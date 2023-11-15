@@ -10,6 +10,7 @@ import PostTitle from '../../components/post-title'
 import Head from 'next/head';
 import markdownToHtml from '../../lib/markdownToHtml';
 import type PostType from '../../interfaces/post';
+import Footer from '@/components/footer';
 
 type Props = {
     post: PostType
@@ -35,6 +36,7 @@ export default function Post({ post, morePosts, preview }: Props) {
                 <Head>
                   <title>{title}</title>
                   <meta property="og:image" content={post.ogImage.url} />
+                  <link rel="icon" href="/images/favicon.ico" sizes="any" />
                 </Head>
                 <PostHeader
                   title={post.title}
@@ -46,6 +48,7 @@ export default function Post({ post, morePosts, preview }: Props) {
             </>
           )}
         </Container>
+        <Footer />
       </Layout>
     )
   }
